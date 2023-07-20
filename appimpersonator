@@ -1,0 +1,32 @@
+CREATE TABLE users (id INTEGER PRIMARY KEY AUTOINCREMENT, full_name TEXT, age INTEGER);
+
+INSERT INTO users (full_name, age) VALUES ("Kim Possible", 17);
+INSERT INTO users (full_name, age) VALUES ("Sandy Cheeks", 15);
+INSERT INTO users (full_name, age) VALUES ("Patrick Star", 26);
+INSERT INTO users (full_name, age) VALUES ("Ron Stoppable", 17);
+INSERT INTO users (full_name, age) VALUES ("Lizzy McGuire", 16);
+
+CREATE TABLE exercise_duration (id INTEGER PRIMARY KEY AUTOINCREMENT, full_name TEXT, duration INTEGER);
+
+INSERT INTO exercise_duration (full_name, duration) VALUES ("Kim Possible", 30);
+INSERT INTO exercise_duration (full_name, duration) VALUES ("Sandy Cheeks", 45);
+INSERT INTO exercise_duration (full_name, duration) VALUES ("Patrick Star", 10);
+INSERT INTO exercise_duration (full_name, duration) VALUES ("Ron Stoppable", 30);
+INSERT INTO exercise_duration (full_name, duration) VALUES ("Lizzy McGuire", 20);
+
+
+CREATE TABLE fitness_app (id INTEGER PRIMARY KEY AUTOINCREMENT, user_id INTEGER, daily_steps INTEGER, heart_rate INTEGER);
+
+INSERT INTO fitness_app (user_id, daily_steps, heart_rate) VALUES (1, 24000, 76);
+INSERT INTO fitness_app (user_id, daily_steps, heart_rate) VALUES (2, 28000, 71);
+INSERT INTO fitness_app (user_id, daily_steps, heart_rate) VALUES (3, 15000, 87);
+INSERT INTO fitness_app (user_id, daily_steps, heart_rate) VALUES (4, 32000, 82);
+INSERT INTO fitness_app (user_id, daily_steps, heart_rate) VALUES (5, 13000, 72);
+
+UPDATE fitness_app SET daily_steps = 25500 WHERE user_id = 1;
+
+ALTER TABLE fitness_app ADD daily_duration INTEGER; 
+
+DROP TABLE exercise_duration;
+
+
